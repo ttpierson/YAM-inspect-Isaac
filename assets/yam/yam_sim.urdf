@@ -18,7 +18,157 @@
     <collision>
       <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
       <geometry>
-        <mesh filename="assets/base.stl" scale="1 1 1" />
+        <mesh filename="collision/base/base_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_011.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_012.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_013.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_014.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_015.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_016.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_017.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_018.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_019.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_020.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_021.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_022.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_023.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_024.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.037496 0.046401 0.1875" rpy="0 1.5708 3.1416" />
+      <geometry>
+        <mesh filename="collision/base/base_025.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -40,7 +190,265 @@
     <collision>
       <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
       <geometry>
-        <mesh filename="assets/gripper.stl" scale="1 1 1" />
+        <mesh filename="collision/gripper/gripper_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_011.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_012.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_013.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_014.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_015.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_016.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_017.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_018.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_019.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_020.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_021.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_022.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_023.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_024.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_025.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_026.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_027.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_028.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_029.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_030.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_031.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_032.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_033.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_034.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_035.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_036.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_037.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_038.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_039.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_040.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_041.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_042.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0463995 -0.014 -0.0731" rpy="3.141592653589793 0 1.5707963267948966" />
+      <geometry>
+        <mesh filename="collision/gripper/gripper_043.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -62,7 +470,631 @@
     <collision>
       <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
       <geometry>
-        <mesh filename="assets/link1.stl" scale="1 1 1" />
+        <mesh filename="collision/link1/link1_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_011.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_012.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_013.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_014.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_015.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_016.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_017.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_018.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_019.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_020.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_021.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_022.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_023.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_024.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_025.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_026.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_027.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_028.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_029.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_030.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_031.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_032.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_033.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_034.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_035.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_036.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_037.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_038.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_039.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_040.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_041.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_042.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_043.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_044.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_045.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_046.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_047.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_048.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_049.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_050.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_051.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_052.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_053.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_054.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_055.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_056.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_057.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_058.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_059.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_060.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_061.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_062.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_063.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_064.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_065.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_066.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_067.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_068.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_069.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_070.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_071.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_072.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_073.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_074.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_075.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_076.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_077.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_078.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_079.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_080.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_081.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_082.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_083.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_084.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_085.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_086.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_087.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_088.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_089.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_090.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_091.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_092.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_093.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_094.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_095.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_096.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_097.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_098.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_099.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_100.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_101.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_102.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_103.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.119501 -0.0464 -0.0374968" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link1/link1_104.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -84,7 +1116,49 @@
     <collision>
       <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
       <geometry>
-        <mesh filename="assets/link2.stl" scale="1 1 1" />
+        <mesh filename="collision/link2/link2_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link2/link2_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link2/link2_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link2/link2_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link2/link2_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link2/link2_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link2/link2_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740001 -0.08025 -0.0174977" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link2/link2_007.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -106,7 +1180,73 @@
     <collision>
       <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
       <geometry>
-        <mesh filename="assets/link3.stl" scale="1 1 1" />
+        <mesh filename="collision/link3/link3_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0740003 -0.0813 -0.281499" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link3/link3_011.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -128,7 +1268,73 @@
     <collision>
       <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
       <geometry>
-        <mesh filename="assets/link4.stl" scale="1 1 1" />
+        <mesh filename="collision/link4/link4_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0140003 -0.0125 -0.0364989" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link4/link4_011.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -150,7 +1356,97 @@
     <collision>
       <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
       <geometry>
-        <mesh filename="assets/link5.stl" scale="1 1 1" />
+        <mesh filename="collision/link5/link5_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_011.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_012.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_013.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_014.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0265 -0.0463995 0.0375" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/link5/link5_015.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -172,7 +1468,271 @@
     <collision>
       <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
       <geometry>
-        <mesh filename="assets/tip_left.stl" scale="1 1 1" />
+        <mesh filename="collision/tip_left/tip_left_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_011.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_012.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_013.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_014.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_015.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_016.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_017.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_018.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_019.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_020.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_021.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_022.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_023.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_024.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_025.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_026.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_027.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_028.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_029.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_030.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_031.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_032.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_033.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_034.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_035.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_036.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_037.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_038.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_039.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_040.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_041.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_042.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_043.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.00999321 -0.0914614 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_left/tip_left_044.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -194,7 +1754,283 @@
     <collision>
       <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
       <geometry>
-        <mesh filename="assets/tip_right.stl" scale="1 1 1" />
+        <mesh filename="collision/tip_right/tip_right_000.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_001.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_002.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_003.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_004.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_005.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_006.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_007.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_008.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_009.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_010.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_011.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_012.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_013.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_014.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_015.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_016.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_017.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_018.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_019.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_020.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_021.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_022.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_023.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_024.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_025.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_026.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_027.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_028.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_029.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_030.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_031.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_032.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_033.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_034.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_035.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_036.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_037.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_038.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_039.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_040.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_041.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_042.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_043.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_044.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_045.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0379932 -0.00133753 0.129783" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/tip_right/tip_right_046.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>

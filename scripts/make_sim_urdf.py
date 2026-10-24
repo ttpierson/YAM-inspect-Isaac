@@ -1,8 +1,9 @@
 """Build a simulation-ready YAM URDF from I2RT's upstream `yam.urdf`.
 
 Upstream ships visual meshes only. Physics engines need collision geometry, so
-this copies every <visual> into a matching <collision> (the importer then
-convex-decomposes the meshes) and recolors links to match the real arm.
+this gives every link one <collision> per convex hull from
+`make_collision_meshes.py`, at the link's visual origin (the hulls share the visual
+mesh's frame), and recolors links to match the real arm.
 
     python scripts/make_sim_urdf.py   # writes assets/yam/yam_sim.urdf
 """
@@ -32,10 +33,16 @@ def main() -> None:
         if material is not None:
             material.set("name", f"{link.get('name')}_mat")
             material.find("color").set("rgba", LINK_COLORS.get(link.get("name"), DARK))
-        if link.find("collision") is None:
+        if link.find("collision") is not None:
+            continue
+        hulls = sorted((ASSET_DIR / "collision" / link.get("name")).glob("*.stl"))
+        if not hulls:
+            raise FileNotFoundError(f"no collision hulls for {link.get('name')}; run make_collision_meshes.py")
+        for hull in hulls:
             collision = ET.SubElement(link, "collision")
             collision.append(copy.deepcopy(visual.find("origin")))
-            collision.append(copy.deepcopy(visual.find("geometry")))
+            geometry = ET.SubElement(collision, "geometry")
+            ET.SubElement(geometry, "mesh", filename=str(hull.relative_to(ASSET_DIR)), scale="1 1 1")
     ET.indent(tree)
     out = ASSET_DIR / "yam_sim.urdf"
     tree.write(out, xml_declaration=True, encoding="utf-8")

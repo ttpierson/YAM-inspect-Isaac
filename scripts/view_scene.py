@@ -1,4 +1,5 @@
-"""Spawn the bimanual YAM scene and move both arms through a demo motion.
+"""Spawn the bimanual YAM scene and loop the contact demo: the left arm picks and places
+the cube, the right arm presses the plate. Link contact forces are printed as they happen.
 
     python scripts/view_scene.py                         # GUI (needs a display, e.g. the noVNC desktop)
     python scripts/view_scene.py --headless --enable_cameras --screenshots out/
@@ -9,7 +10,7 @@ import argparse
 from isaaclab.app import AppLauncher
 
 parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-parser.add_argument("--screenshots", type=str, default=None, help="Directory to save overview camera PNGs into.")
+parser.add_argument("--screenshots", type=str, default=None, help="Directory to save overview, top and wrist camera PNGs into.")
 parser.add_argument("--steps", type=int, default=0, help="Stop after this many sim steps (0 = run until closed).")
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
@@ -17,69 +18,70 @@ if args.screenshots:
     args.enable_cameras = True
 app = AppLauncher(args).app
 
-import math  # noqa: E402
 import sys  # noqa: E402
 from pathlib import Path  # noqa: E402
-
-import torch  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import isaaclab.sim as sim_utils  # noqa: E402
 from isaaclab.scene import InteractiveScene  # noqa: E402
 
-from yam_sim.assets import FINGER_OPEN  # noqa: E402
-from yam_sim.scene import BimanualYamSceneCfg  # noqa: E402
+from yam_sim.demo import make_drivers, reset_scene  # noqa: E402
+from yam_sim.scene import PHYSICS_DT, RENDER_INTERVAL, BimanualYamSceneCfg, update_wrist_cams  # noqa: E402
 
-# A raised "ready" pose: shoulder up, elbow bent, wrist pitched down toward the table.
-READY = [0.0, 1.0, 1.0, -0.6, 0.0, 0.0]
-
-
-def demo_targets(t: float, mirror: float) -> list[float]:
-    """Ready pose plus a slow wave; `mirror` flips the base yaw for the other arm."""
-    swing = 0.35 * math.sin(0.8 * t)
-    pose = READY.copy()
-    pose[0] += mirror * swing
-    pose[1] += 0.25 * math.sin(0.5 * t)
-    pose[5] = 0.8 * math.sin(1.1 * t)
-    grip = FINGER_OPEN * (0.5 + 0.5 * math.sin(1.5 * t))
-    return pose + [grip, grip]
+CAMERAS = ("overview_cam", "top_cam", "left_cam", "right_cam")
 
 
 def main() -> None:
-    sim = sim_utils.SimulationContext(sim_utils.SimulationCfg(dt=1 / 120, device=args.device))
+    sim = sim_utils.SimulationContext(
+        sim_utils.SimulationCfg(dt=PHYSICS_DT, render_interval=RENDER_INTERVAL, device=args.device)
+    )
     sim.set_camera_view(eye=(-0.9, 0.9, 1.5), target=(0.3, 0.0, 0.8))
     scene_cfg = BimanualYamSceneCfg(num_envs=1, env_spacing=3.0)
     if not args.enable_cameras:
-        scene_cfg.overview_cam = None
+        for name in CAMERAS:
+            setattr(scene_cfg, name, None)
     scene = InteractiveScene(scene_cfg)
     sim.reset()
-    arms = {"left": (scene["left_arm"], 1.0), "right": (scene["right_arm"], -1.0)}
     print("[yam_sim] joints:", scene["left_arm"].joint_names)
 
     out_dir = Path(args.screenshots) if args.screenshots else None
     if out_dir:
         out_dir.mkdir(parents=True, exist_ok=True)
 
-    step = 0
+    drivers = make_drivers(scene)
+    episode = max(d.duration for d in drivers) + 2.0
+    step, t = 0, 0.0
     while app.is_running():
-        t = step * sim.get_physics_dt()
-        for arm, mirror in arms.values():
-            target = torch.tensor([demo_targets(t, mirror)], device=sim.device)
-            arm.set_joint_position_target(target)
+        if t > episode:
+            reset_scene(scene)
+            drivers, t = make_drivers(scene), 0.0
+        for driver in drivers:
+            driver.step(t)
         scene.write_data_to_sim()
-        sim.step()
-        scene.update(sim.get_physics_dt())
+        update_wrist_cams(scene)
+        sim.step(render=(step + 1) % RENDER_INTERVAL == 0)
+        scene.update(PHYSICS_DT)
         step += 1
+        t += PHYSICS_DT
+        if step % 60 == 0:
+            for side in ("left", "right"):
+                sensor = scene[f"{side}_contacts"]
+                forces = sensor.data.net_forces_w[0].norm(dim=-1)
+                touching = {n: round(float(f), 1) for n, f in zip(sensor.body_names, forces) if f > 0.05}
+                if touching:
+                    print(f"[yam_sim] t={t:5.2f}s {side} arm contact N: {touching}")
         if out_dir and step % 120 == 0:
             import imageio.v3 as iio
 
-            rgb = scene["overview_cam"].data.output["rgb"][0].cpu().numpy()
-            path = out_dir / f"overview_{step:05d}.png"
-            iio.imwrite(path, rgb)
-            print(f"[yam_sim] saved {path}")
+            for name in CAMERAS:
+                rgb = scene[name].data.output["rgb"][0].cpu().numpy()
+                path = out_dir / f"{name}_{step:05d}.png"
+                iio.imwrite(path, rgb)
+            print(f"[yam_sim] saved {', '.join(CAMERAS)} frames for step {step}")
         if args.steps and step >= args.steps:
             break
+    sys.stdout.flush()
     app.close()
 
 

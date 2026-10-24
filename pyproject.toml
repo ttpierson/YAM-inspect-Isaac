@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yam-sim"
+version = "0.1.0"
+description = "Bimanual I2RT YAM scene for Isaac Lab and its Inspect Robots embodiment"
+requires-python = ">=3.10"
+# Isaac Lab / Isaac Sim are not PyPI dependencies: install this into an Isaac Lab
+# environment. Install editable (`pip install -e .`): the URDF and meshes are read from
+# the checkout's assets/ directory.
+dependencies = [
+    "inspect-robots>=0.58",
+    # Pinned: the embodiment reuses its observation/action contract and joint guide.
+    "inspect-robots-yam==0.37.0",
+    "numpy",
+    "opencv-python-headless",
+]
+
+[tool.setuptools]
+packages = ["yam_sim"]
+
+[project.scripts]
+yam-sim = "yam_sim.cli:main"
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_sim = "yam_sim.embodiment:yam_sim_embodiment"

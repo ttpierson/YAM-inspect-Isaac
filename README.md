@@ -138,8 +138,10 @@ In the [Brev console](https://brev.nvidia.com), open **Launchables** and create 
    ```bash
    curl -fsSL https://raw.githubusercontent.com/ttpierson/YAM-inspect-Isaac/main/launchable/setup.sh | bash
    ```
-5. **Ports**: expose 6080 as a secure link (tunnel). noVNC listens on localhost only, so
-   don't open it as a public port.
+5. **Network**: a secure link for port 6080, set as the CTA (the bare link opens the
+   desktop). noVNC listens on localhost only, so don't open it as a public port. The
+   desktop comes up only after setup finishes; Jupyter (8888), if installed, is up sooner
+   and handy for watching `yam-setup.log`.
 
 ### Use it
 

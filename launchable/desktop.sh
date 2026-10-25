@@ -17,7 +17,16 @@ xfconf-query -c xfwm4 -p /general/use_compositing -s false 2>/dev/null
 xset s off -dpms 2>/dev/null
 
 x11vnc -display :1 -forever -shared -rfbauth "$HOME/.vnc/passwd" -localhost -rfbport 5900 -quiet &
-websockify --web /usr/share/novnc 127.0.0.1:6080 localhost:5900 &
+# noVNC with an index page that opens the client, so the bare port link (the launchable's
+# button) lands on the desktop rather than a directory listing.
+WEB=$HOME/.cache/yam-novnc
+mkdir -p "$WEB"
+for f in /usr/share/novnc/*; do ln -sfn "$f" "$WEB/"; done
+rm -f "$WEB/index.html"
+cat > "$WEB/index.html" <<'HTML'
+<!doctype html><meta http-equiv="refresh" content="0; url=vnc.html?autoconnect=1&resize=remote">
+HTML
+websockify --web "$WEB" 127.0.0.1:6080 localhost:5900 &
 
 # If any part dies, exit so systemd restarts the whole desktop.
 wait -n

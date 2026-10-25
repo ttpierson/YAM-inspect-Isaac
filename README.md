@@ -5,8 +5,9 @@ Bimanual [I2RT YAM](https://i2rt.com/products/yam-6-dof-arm) simulation for
 launchable alongside [inspect-robots](https://github.com/robocurve/inspect-robots).
 
 Status: the scene works (two arms, table, cube, plate, overhead and wrist cameras) and
-runs under inspect-robots as the `yam_sim` embodiment. The launchable setup script
-comes next.
+runs under inspect-robots as the `yam_sim` embodiment. `launchable/setup.sh` builds the
+whole workstation on a bare Brev GPU VM (see [Brev launchable](#brev-launchable)); it has
+not yet been run end to end on a fresh instance.
 
 ## Layout
 
@@ -19,6 +20,8 @@ comes next.
 | `yam_sim/scene.py` | `BimanualYamSceneCfg`, the tabletop scene |
 | `yam_sim/cli.py` | The `yam-sim view` and `yam-sim edit` commands |
 | `yam_sim/embodiment.py` | `yam_sim`, the scene as an inspect-robots embodiment |
+| `launchable/setup.sh` | Brev setup script: Isaac Sim + Isaac Lab, inspect-robots, this repo, the browser desktop |
+| `launchable/desktop.sh` | The browser desktop (Xvfb + xfce + noVNC on port 6080), run by the `yam-desktop` service |
 | `scripts/view_scene.py` | Spawns the scene and runs a demo motion |
 | `scripts/check_collision.py` | Measures, per link, how closely the simulated colliders follow the visual meshes |
 
@@ -103,3 +106,53 @@ sim_embodiment = yam_sim
 Other `-E` options: `scene` (a file from `yam-sim edit`), `cam_height`, `cam_width`,
 `control_hz`, `device`. A seeded reset shifts every object (the cube and plate in the
 built-in scene) by up to 3 cm.
+
+## Brev launchable
+
+`launchable/setup.sh` turns a bare Ubuntu GPU VM into this workstation:
+
+- Isaac Sim 5.1 and Isaac Lab 2.3.2 in a uv venv (`env_isaaclab`, Python 3.11),
+  activated in `~/.bashrc`
+- [inspect-robots](https://github.com/robocurve/inspect-robots) (tag `v0.60.0`) with its
+  `agent` policy plugin, and this repo, all editable
+- a browser desktop as the `yam-desktop` systemd service: Xvfb + xfce on `:1`, noVNC on
+  `localhost:6080`, password in `~/yam-desktop-password`
+
+It installs under `/data` when that is writable, else `$HOME`, logs to `yam-setup.log`
+there, and skips finished steps when re-run. The first run takes a while; most of it is
+the Isaac Sim download.
+
+Deploying it accepts the
+[NVIDIA Omniverse license](https://docs.isaacsim.omniverse.nvidia.com/latest/common/NVIDIA_Omniverse_License_Agreement.html)
+for Isaac Sim (it sets `OMNI_KIT_ACCEPT_EULA=YES`).
+
+### Create the launchable
+
+In the [Brev console](https://brev.nvidia.com), open **Launchables** and create one:
+
+1. **Compute**: an L40S (any RTX GPU works; Isaac Sim needs RT cores, so not A100/H100),
+   with about 200 GB of disk.
+2. **Software**: VM mode, Ubuntu 22.04 with the NVIDIA driver.
+3. **Code**: this repo, `https://github.com/ttpierson/YAM-inspect-Isaac`.
+4. **Setup script**: the contents of `launchable/setup.sh`, or a line that fetches it:
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/ttpierson/YAM-inspect-Isaac/main/launchable/setup.sh | bash
+   ```
+5. **Ports**: expose 6080 as a secure link (tunnel). noVNC listens on localhost only, so
+   don't open it as a public port.
+
+### Use it
+
+Once the setup log ends with `=== [yam-setup] done`, open the 6080 link (or run
+`brev port-forward <instance> -p 6080:6080` and open http://localhost:6080/vnc.html), and
+log in with the password from `~/yam-desktop-password`. From a terminal on the desktop or
+over `brev shell`:
+
+```bash
+yam-sim view                    # the scene, arms holding still
+yam-sim edit ~/scene.usda       # edit and save the environment
+export ANTHROPIC_API_KEY=...    # for the agent policy
+inspect-robots run --embodiment yam_sim --policy agent --instruction "put the red cube on the plate"
+```
+
+`sudo systemctl restart yam-desktop` restarts the desktop if it gets stuck.

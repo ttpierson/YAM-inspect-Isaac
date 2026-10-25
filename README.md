@@ -116,7 +116,7 @@ built-in scene) by up to 3 cm.
 - [inspect-robots](https://github.com/robocurve/inspect-robots) (tag `v0.60.0`) with its
   `agent` policy plugin, and this repo, all editable
 - a browser desktop as the `yam-desktop` systemd service: Xvfb + xfce on `:1`, noVNC on
-  `localhost:6080`, password in `~/yam-desktop-password`
+  port 6080, password in `~/yam-desktop-password`
 
 It installs under `/data` when that is writable, else `$HOME`, logs to `yam-setup.log`
 there, and skips finished steps when re-run. The first run takes a while; most of it is
@@ -139,7 +139,7 @@ In the [Brev console](https://brev.nvidia.com), open **Launchables** and create 
    curl -fsSL https://raw.githubusercontent.com/ttpierson/YAM-inspect-Isaac/main/launchable/setup.sh | bash
    ```
 5. **Network**: a secure link for port 6080, set as the CTA (the bare link opens the
-   desktop). noVNC listens on localhost only, so don't open it as a public port. The
+   desktop). Don't also open 6080 as a public TCP port: the VNC password is all that guards it. The
    desktop comes up only after setup finishes; Jupyter (8888), if installed, is up sooner
    and handy for watching `yam-setup.log`.
 

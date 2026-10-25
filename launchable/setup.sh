@@ -3,7 +3,7 @@
 #
 # Installs Isaac Sim 5.1 + Isaac Lab 2.3.2 (uv venv, Python 3.11), inspect-robots with its
 # `agent` policy plugin, and this repo (`yam-sim` command, `yam_sim` embodiment), then
-# starts a browser desktop (Xvfb + xfce + noVNC on localhost:6080) as a systemd service.
+# starts a browser desktop (Xvfb + xfce + noVNC on port 6080) as a systemd service.
 #
 # Run as the login user (with sudo) or as root; safe to re-run, finished steps are skipped.
 # Paste it as the launchable's setup script, or run it from a checkout:
@@ -121,7 +121,7 @@ if [ ! -f "$HOME/.vnc/passwd" ]; then
 fi
 sudo tee /etc/systemd/system/yam-desktop.service >/dev/null <<UNIT
 [Unit]
-Description=YAM sim desktop (Xvfb :1 + xfce, noVNC on localhost:6080)
+Description=YAM sim desktop (Xvfb :1 + xfce, noVNC on port 6080)
 After=network.target
 
 [Service]

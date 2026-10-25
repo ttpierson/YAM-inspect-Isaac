@@ -2,7 +2,7 @@
 # The launchable's browser desktop, run in the foreground by yam-desktop.service.
 #
 # A virtual X display (Xvfb :1, 1920x1080) with an xfce session, shared over VNC and served
-# by noVNC on localhost:6080. Isaac Sim still renders on the GPU (Vulkan) and presents into
+# by noVNC on port 6080. Isaac Sim still renders on the GPU (Vulkan) and presents into
 # this display; NVIDIA's own Xorg captures as all black over VNC, hence Xvfb.
 set -u
 export DISPLAY=:1
@@ -26,7 +26,9 @@ rm -f "$WEB/index.html"
 cat > "$WEB/index.html" <<'HTML'
 <!doctype html><meta http-equiv="refresh" content="0; url=vnc.html?autoconnect=1&resize=remote">
 HTML
-websockify --web "$WEB" 127.0.0.1:6080 localhost:5900 &
+# On all interfaces: Brev's secure-link proxy connects to the VM's address, not loopback.
+# The VNC password guards it; Brev's firewall only opens the ports the launchable exposes.
+websockify --web "$WEB" 6080 localhost:5900 &
 
 # If any part dies, exit so systemd restarts the whole desktop.
 wait -n

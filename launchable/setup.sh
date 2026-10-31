@@ -79,8 +79,10 @@ export OMNI_KIT_ACCEPT_EULA=YES ACCEPT_EULA=Y
 # Arena's submodules use SSH URLs, and a fresh VM has no GitHub key.
 git -C "$ARENA" -c url."https://github.com/".insteadOf="git@github.com:" submodule update --init --depth 1
 if [ ! -x "$VENV/bin/python" ] || ! "$VENV/bin/python" -c "import isaaclab_arena, isaaclab" 2>/dev/null; then
-  # Arena's lockfile pins the whole stack. --inexact keeps the packages installed below on re-runs.
-  (cd "$ARENA" && uv sync --locked --inexact)
+  # Arena's lockfile pins the whole stack; --frozen installs it as locked without re-checking it
+  # against pyproject.toml (release/0.3.1's lockfile fails --locked). --inexact keeps the
+  # packages installed below on re-runs.
+  (cd "$ARENA" && uv sync --frozen --inexact)
 fi
 # shellcheck disable=SC1091
 source "$VENV/bin/activate"

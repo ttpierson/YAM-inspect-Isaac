@@ -2,7 +2,7 @@
 places the cube, the right arm presses the plate. Link contact forces are printed as they happen.
 
     python scripts/view_scene.py                                  # GUI (needs a display, e.g. the noVNC desktop)
-    python scripts/view_scene.py --headless --screenshots out/ --steps 120
+    python scripts/view_scene.py --viz none --screenshots out/ --steps 120   # headless
 """
 
 import argparse
@@ -14,16 +14,14 @@ from isaaclab.app import AppLauncher
 parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 parser.add_argument("--screenshots", type=str, default=None, help="Directory to save overview, top and wrist camera PNGs into.")
 parser.add_argument("--steps", type=int, default=0, help="Stop after this many control steps (0 = run until closed).")
-parser.add_argument("--headless", action="store_true", help="Run without the GUI (Isaac Lab 3 opens it only with --viz kit).")
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
 if args.screenshots:
     args.enable_cameras = True
-if not args.headless:
-    if not os.environ.get("DISPLAY") and Path("/tmp/.X11-unix/X1").exists():
-        os.environ["DISPLAY"] = ":1"  # the launchable's noVNC desktop
-    if args.visualizer is None:
-        args.visualizer = ["kit"]
+if args.visualizer is None:  # open the Kit viewer unless --viz says otherwise (--viz none: headless)
+    args.visualizer = ["kit"]
+if "kit" in args.visualizer and not os.environ.get("DISPLAY") and Path("/tmp/.X11-unix/X1").exists():
+    os.environ["DISPLAY"] = ":1"  # the launchable's noVNC desktop
 os.environ.setdefault("OMNI_KIT_ACCEPT_EULA", "YES")
 app = AppLauncher(args).app
 

@@ -92,7 +92,7 @@ arm presses its closed fingers onto the plate. `python scripts/diagnose_physics.
 once and checks that the cube was lifted, the fingers stopped on the plate, and the joints
 stayed within limits.
 `python scripts/view_scene.py` loops it in the GUI and prints each arm link's contact force;
-`--headless --screenshots out/ --steps 120` saves overview, top and wrist frames instead.
+`--viz none --screenshots out/ --steps 120` runs headless and saves overview, top and wrist frames instead.
 
 ## View and edit the scene
 

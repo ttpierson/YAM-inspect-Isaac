@@ -16,8 +16,8 @@ parser.add_argument("--screenshots", type=str, default=None, help="Directory to 
 parser.add_argument("--steps", type=int, default=0, help="Stop after this many control steps (0 = run until closed).")
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
-if args.screenshots:
-    args.enable_cameras = True
+# The policy cameras only render (and cost GPU time) when frames are saved.
+args.enable_cameras = bool(args.screenshots)
 if args.visualizer is None:  # open the Kit viewer unless --viz says otherwise (--viz none: headless)
     args.visualizer = ["kit"]
 if "kit" in args.visualizer and not os.environ.get("DISPLAY") and Path("/tmp/.X11-unix/X1").exists():

@@ -14,6 +14,7 @@ from isaaclab.app import AppLauncher
 parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 parser.add_argument("--screenshots", type=str, default=None, help="Directory to save overview, top and wrist camera PNGs into.")
 parser.add_argument("--steps", type=int, default=0, help="Stop after this many control steps (0 = run until closed).")
+parser.add_argument("--headless", action="store_true", help="Run without the GUI (Isaac Lab 3 opens it only with --viz kit).")
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
 if args.screenshots:

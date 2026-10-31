@@ -14,7 +14,7 @@ Links, visual meshes and colliders are found from the USD physics schemas (a mes
 the nearest rigid body above it; colliders carry CollisionAPI), not from the importer's prim
 layout, which changed in Isaac Lab 3's URDF importer.
 
-    python scripts/check_collision.py --headless
+    python scripts/check_collision.py
 """
 
 import argparse

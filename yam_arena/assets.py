@@ -36,6 +36,10 @@ YAM_CFG = ArticulationCfg(
         # Gravity-free links are the same thing, exactly: a held object still weighs on the fingers.
         rigid_props=sim_utils.RigidBodyPropertiesCfg(disable_gravity=True, max_depenetration_velocity=1.0),
         articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+            # Isaac Lab 3's importer adds the world joint (fix_base) but leaves the articulation
+            # root on the base link, so PhysX simulates a floating base held by that joint.
+            # This moves the root above the joint, making the arm truly fixed-base.
+            fix_root_link=True,
             # The finger carriages slide inside the gripper housing and past each other, so their
             # convex hulls overlap by design; self-collision would push the fingers apart.
             enabled_self_collisions=False,

@@ -182,8 +182,11 @@ class _ArmScript:
         self.device = self.arm.device
         self.arm_ids = self.arm.find_joints(ARM_JOINTS, preserve_order=True)[0]
         self.ee_idx = self.arm.find_bodies("gripper")[0][0]
-        # With a fixed base the root body has no Jacobian row, so body indices shift by one.
-        self.jac_idx = self.ee_idx - 1
+        # A fixed base has no Jacobian row of its own, so body rows shift by one; a floating
+        # base instead adds six base columns ahead of the joints.
+        fixed = self.arm.is_fixed_base
+        self.jac_idx = self.ee_idx - 1 if fixed else self.ee_idx
+        self.jac_cols = self.arm_ids if fixed else [i + 6 for i in self.arm_ids]
         self.offset = torch.tensor([TCP_OFFSET], device=self.device).expand(env.num_envs, -1)
         self.down = torch.tensor(DOWN, device=self.device).expand(env.num_envs, -1)
         self.ik = DifferentialIKController(
@@ -238,7 +241,7 @@ class _ArmScript:
 
         pos, quat, finger = self._target(t)
         tcp_pos, tcp_quat = self.tcp_pose()
-        jac = self.arm.data.body_link_jacobian_w.torch[:, self.jac_idx, :, self.arm_ids].clone()
+        jac = self.arm.data.body_link_jacobian_w.torch[:, self.jac_idx, :, self.jac_cols].clone()
         # Shift the Jacobian from the gripper link origin to the TCP: v_tcp = v_link + w x r.
         r = tcp_pos - self.arm.data.body_pos_w.torch[:, self.ee_idx]
         jac[:, 0:3] -= torch.bmm(skew_symmetric_matrix(r), jac[:, 3:6])

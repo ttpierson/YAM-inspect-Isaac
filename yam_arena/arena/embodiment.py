@@ -22,12 +22,12 @@ from isaaclab_arena.utils.cameras import ArenaCameraCfg
 from yam_arena.arena.mdp import YamArmActionCfg, reset_arm_to_ready, yam_joint_pos
 from yam_arena.assets import YAM_CFG
 from yam_arena.rig import (
+    ARM_MOUNT_Z,
     ARM_SPACING,
     CAM_HEIGHT,
     CAM_WIDTH,
     D405_FOCAL,
     D435_FOCAL,
-    TABLE_HEIGHT,
     TOP_CAM_POS,
     TOP_CAM_ROT,
 )
@@ -39,11 +39,11 @@ class YamBimanualSceneCfg:
 
     left_arm: ArticulationCfg = YAM_CFG.replace(
         prim_path="{ENV_REGEX_NS}/LeftArm",
-        init_state=YAM_CFG.init_state.replace(pos=(0.0, ARM_SPACING / 2, TABLE_HEIGHT)),
+        init_state=YAM_CFG.init_state.replace(pos=(0.0, ARM_SPACING / 2, ARM_MOUNT_Z)),
     )
     right_arm: ArticulationCfg = YAM_CFG.replace(
         prim_path="{ENV_REGEX_NS}/RightArm",
-        init_state=YAM_CFG.init_state.replace(pos=(0.0, -ARM_SPACING / 2, TABLE_HEIGHT)),
+        init_state=YAM_CFG.init_state.replace(pos=(0.0, -ARM_SPACING / 2, ARM_MOUNT_Z)),
     )
 
 

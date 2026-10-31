@@ -50,6 +50,10 @@ TABLE_SIZE = (0.8, 1.2, 0.04)
 TABLE_CENTER_X = 0.35
 # Arms sit 0.6 m apart on the near edge of the table, both reaching along +X across it.
 ARM_SPACING = 0.6
+# Arm bases sit this far above the table top. Isaac Lab 3 holds each base with a joint to the
+# world rather than as a fixed root, so a base hull overlapping the table would fight that joint
+# (thousands of newtons of contact); 3 mm clears the hull.
+ARM_MOUNT_Z = TABLE_HEIGHT + 0.003
 CUBE_SIZE = 0.04
 CUBE_POS = (0.35, 0.12, TABLE_HEIGHT + CUBE_SIZE / 2)
 PLATE_RADIUS = 0.09

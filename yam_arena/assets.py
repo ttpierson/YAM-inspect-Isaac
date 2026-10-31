@@ -20,6 +20,10 @@ _FINGER_M_PER_RAD = 0.096 / 2 / 6.57
 YAM_CFG = ArticulationCfg(
     spawn=sim_utils.UrdfFileCfg(
         asset_path=str(YAM_URDF),
+        # Isaac Lab 3's importer anchors the base with a joint to the world but keeps the
+        # articulation root on the base link, so PhysX reports a floating base (is_fixed_base is
+        # False, and Jacobians carry six base columns). fix_root_link can't relocate that root:
+        # its properties are authored inside the imported USD.
         fix_base=True,
         merge_fixed_joints=False,
         # Each URDF <collision> is already one convex CoACD hull (make_collision_meshes.py), so
@@ -36,10 +40,6 @@ YAM_CFG = ArticulationCfg(
         # Gravity-free links are the same thing, exactly: a held object still weighs on the fingers.
         rigid_props=sim_utils.RigidBodyPropertiesCfg(disable_gravity=True, max_depenetration_velocity=1.0),
         articulation_props=sim_utils.ArticulationRootPropertiesCfg(
-            # Isaac Lab 3's importer adds the world joint (fix_base) but leaves the articulation
-            # root on the base link, so PhysX simulates a floating base held by that joint.
-            # This moves the root above the joint, making the arm truly fixed-base.
-            fix_root_link=True,
             # The finger carriages slide inside the gripper housing and past each other, so their
             # convex hulls overlap by design; self-collision would push the fingers apart.
             enabled_self_collisions=False,

@@ -1,5 +1,5 @@
 #!/bin/bash
-# The launchable's browser desktop, run in the foreground by yam-desktop.service.
+# The launchable's browser desktop, run in the foreground by yam-arena-desktop.service.
 #
 # A virtual X display (Xvfb :1, 1920x1080) with an xfce session, shared over VNC and served
 # by noVNC on port 6080. Isaac Sim still renders on the GPU (Vulkan) and presents into

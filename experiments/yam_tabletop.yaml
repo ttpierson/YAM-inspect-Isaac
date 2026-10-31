@@ -1,0 +1,37 @@
+# Arena Experiment for the bimanual YAM tabletop. Run it with
+#     yam-arena eval experiments/yam_tabletop.yaml
+# Values under shared apply to every Run; a Run lists only what it changes. Override on the
+# command line with shared.<path>=<value> or runs.<name>.<path>=<value>, e.g.
+#     yam-arena eval experiments/yam_tabletop.yaml shared.rollout_limit.num_episodes=10
+shared:
+  environment:
+    type: yam_tabletop
+    # The policy cameras (top_cam, left_cam, right_cam) are part of the observation.
+    enable_cameras: true
+    task_description: put the red cube on the plate
+    episode_length_s: 60.0
+  rollout_limit:
+    num_episodes: 3
+  environment_builder:
+    # InspectRobotsPolicy drives one environment at a time.
+    num_envs: 1
+    env_spacing: 3.0
+
+runs:
+  # Any Inspect Robots policy, judged by Arena's pick-and-place success and metrics. This is
+  # the Claude agent policy (needs ANTHROPIC_API_KEY); policy_args takes the factory's
+  # keyword arguments as JSON, like `inspect-robots run -P`.
+  agent:
+    policy:
+      type: yam_arena.arena.policies.InspectRobotsPolicy
+      inspect_policy: agent
+      policy_args: "{}"
+
+  # The scripted contact demo: a quick check that the scene, arms and cameras work.
+  scripted_demo:
+    policy:
+      type: yam_arena.arena.policies.YamDemoPolicy
+    rollout_limit:
+      num_episodes: 1
+    environment:
+      episode_length_s: 18.0

@@ -10,10 +10,15 @@ than the link's visual surface:
 - negative: collider is inset from the mesh
 - miss:     no collider of this link anywhere along the ray
 
+Links, visual meshes and colliders are found from the USD physics schemas (a mesh belongs to
+the nearest rigid body above it; colliders carry CollisionAPI), not from the importer's prim
+layout, which changed in Isaac Lab 3's URDF importer.
+
     python scripts/check_collision.py --headless
 """
 
 import argparse
+import os
 
 from isaaclab.app import AppLauncher
 
@@ -23,6 +28,7 @@ parser.add_argument("--standoff", type=float, default=0.05, help="Ray start dist
 parser.add_argument("--tol", type=float, default=0.002, help="Error within this many metres counts as matching.")
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
+os.environ.setdefault("OMNI_KIT_ACCEPT_EULA", "YES")
 app = AppLauncher(args).app
 
 import sys  # noqa: E402
@@ -38,11 +44,31 @@ import omni.physx  # noqa: E402
 import omni.usd  # noqa: E402
 import trimesh  # noqa: E402
 from isaaclab.assets import Articulation  # noqa: E402
-from pxr import Usd, UsdGeom  # noqa: E402
+from pxr import Usd, UsdGeom, UsdPhysics  # noqa: E402
 
-from yam_sim.assets import YAM_CFG  # noqa: E402
+from yam_arena.assets import YAM_CFG  # noqa: E402
 
 ROOT = "/World/Yam"
+
+
+def owning_body(prim) -> str | None:
+    """Path of the rigid body (link) a prim belongs to: the nearest one at or above it."""
+    while prim and prim.IsValid():
+        if prim.HasAPI(UsdPhysics.RigidBodyAPI):
+            return str(prim.GetPath())
+        prim = prim.GetParent()
+    return None
+
+
+def is_collider(prim) -> bool:
+    """Collision geometry: a collider itself, or invisible guide geometry under one."""
+    if UsdGeom.Imageable(prim).ComputePurpose() == UsdGeom.Tokens.guide:
+        return True
+    while prim and prim.IsValid() and not prim.HasAPI(UsdPhysics.RigidBodyAPI):
+        if prim.HasAPI(UsdPhysics.CollisionAPI):
+            return True
+        prim = prim.GetParent()
+    return False
 
 
 def world_mesh(prim) -> trimesh.Trimesh:
@@ -68,34 +94,35 @@ def main() -> None:
 
     stage = omni.usd.get_context().get_stage()
     visuals = {}
-    for prim in stage.Traverse(Usd.TraverseInstanceProxies()):
-        path = str(prim.GetPath())
-        if path.startswith(ROOT + "/") and "/visuals/" in path and prim.IsA(UsdGeom.Mesh):
-            visuals.setdefault(path.split("/")[3], []).append(world_mesh(prim))
+    for prim in Usd.PrimRange(stage.GetPrimAtPath(ROOT), Usd.TraverseInstanceProxies()):
+        if prim.IsA(UsdGeom.Mesh) and not is_collider(prim):
+            body = owning_body(prim)
+            if body is not None:
+                visuals.setdefault(body, []).append(world_mesh(prim))
+    name = lambda body: body.rsplit("/", 1)[-1]  # noqa: E731
 
     sq = omni.physx.get_physx_scene_query_interface()
     rng = np.random.default_rng(0)
     print(f"\n{'link':10s} {'match':>6s} {'bulge':>6s} {'inset':>6s} {'miss':>6s}   err p5/p50/p95 mm   other-link hits")
-    for link in sorted(visuals):
-        vis = trimesh.util.concatenate(visuals[link])
+    for body in sorted(visuals, key=name):
+        link = name(body)
+        vis = trimesh.util.concatenate(visuals[body])
         pts, face = trimesh.sample.sample_surface(vis, args.samples, seed=int(rng.integers(1 << 31)))
         normals = vis.face_normals[face]
-        own = f"/{link}/collisions/"
         errs, others, origins = [], {}, []
         for p, n in zip(pts, normals):
             hits = []
 
             def report(h, hits=hits):
-                hits.append((h.distance, h.collision))
+                hits.append((h.distance, h.rigid_body))
                 return True
 
             origin = p + n * args.standoff
             sq.raycast_all(carb.Float3(*origin), carb.Float3(*(-n)), 2 * args.standoff, report)
-            mine = [d for d, c in hits if own in c]
-            for d, c in hits:
-                if own not in c and d < args.standoff:
-                    other = c.split("/")[3]
-                    others[other] = others.get(other, 0) + 1
+            mine = [d for d, b in hits if b == body]
+            for d, b in hits:
+                if b != body and d < args.standoff:
+                    others[name(b)] = others.get(name(b), 0) + 1
             origins.append(origin)
             errs.append(min(mine) if mine else np.nan)
         # Reference: where the same ray first meets this link's visual surface. In a slot or

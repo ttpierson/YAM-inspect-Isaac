@@ -2,8 +2,11 @@
 # Brev launchable setup: turn a bare Ubuntu GPU VM into the YAM sim workstation.
 #
 # Installs Isaac Sim 5.1 + Isaac Lab 2.3.2 (uv venv, Python 3.11), inspect-robots with its
-# `agent` policy plugin, and this repo (`yam-sim` command, `yam_sim` embodiment), then
-# starts a browser desktop (Xvfb + xfce + noVNC on port 6080) as a systemd service.
+# `agent` policy plugin, and this repo (`yam-sim` command, `yam_sim` embodiment). Beside them,
+# in Arena's own venv (Isaac Sim 6, Isaac Lab 3.0, Python 3.12): Isaac Lab Arena 0.3.1,
+# yam-isaac-lab-arena (`yam_arena` embodiment, `yam_scripted` demo policy), Dream-1 (`dream`
+# policy), and this repo's Arena scene (`yam-arena` command, `yam_tabletop` embodiment).
+# Then starts a browser desktop (Xvfb + xfce + noVNC on port 6080) as a systemd service.
 #
 # Run as the login user (with sudo) or as root; safe to re-run, finished steps are skipped.
 # Paste it as the launchable's setup script, or run it from a checkout:
@@ -14,6 +17,8 @@
 #   YAM_REPO_REF        branch or tag of this repo to clone when not run from a checkout (main)
 #   INSPECT_ROBOTS_REF  inspect-robots tag or branch (v0.60.0)
 #   YAM_VNC_PASSWORD    desktop password (default: random, saved to ~/yam-desktop-password)
+#   YAM_ARENA_STACK_REF yam-isaac-lab-arena commit or tag to install (see below)
+#   DREAM_REF           inspect-robots-dream commit or tag to install (see below)
 #
 # Deploying this accepts the NVIDIA Omniverse license for Isaac Sim on the VM's behalf
 # (OMNI_KIT_ACCEPT_EULA=YES): https://docs.isaacsim.omniverse.nvidia.com/latest/common/NVIDIA_Omniverse_License_Agreement.html
@@ -27,13 +32,16 @@ if [ "$(id -u)" = 0 ] && id ubuntu >/dev/null 2>&1; then
     curl -fsSL https://raw.githubusercontent.com/ttpierson/YAM-inspect-Isaac/main/launchable/setup.sh -o /tmp/yam-setup.sh
     chmod 755 /tmp/yam-setup.sh
   fi
-  exec sudo -u ubuntu -H --preserve-env=YAM_PREFIX,YAM_REPO_REF,INSPECT_ROBOTS_REF,YAM_VNC_PASSWORD bash /tmp/yam-setup.sh "$@"
+  exec sudo -u ubuntu -H --preserve-env=YAM_PREFIX,YAM_REPO_REF,INSPECT_ROBOTS_REF,YAM_VNC_PASSWORD,YAM_ARENA_STACK_REF,DREAM_REF bash /tmp/yam-setup.sh "$@"
 fi
 
 REPO_URL=https://github.com/ttpierson/YAM-inspect-Isaac.git
 ISAACLAB_REF=v2.3.2
 ISAACSIM_VERSION=5.1.0
 INSPECT_ROBOTS_REF=${INSPECT_ROBOTS_REF:-v0.60.0}
+YAM_ARENA_STACK_URL=https://github.com/kairosiann/yam-isaac-lab-arena.git
+YAM_ARENA_STACK_REF=${YAM_ARENA_STACK_REF:-0059d02a1a91bc6834c1d0846022891df0c78730}
+DREAM_REF=${DREAM_REF:-b5e936a201cec66c54c297e522c920d98445e339}
 if [ -z "${YAM_PREFIX:-}" ]; then
   if [ -d /data ] && [ -w /data ]; then YAM_PREFIX=/data; else YAM_PREFIX=$HOME; fi
 fi
@@ -101,6 +109,27 @@ step "yam-sim ($REPO)"
 uv pip install -e "$REPO"
 inspect-robots list embodiments | grep yam_sim
 
+step "Isaac Lab Arena, YAM embodiment, Dream-1 and scripted demo"
+ARENA=$YAM_PREFIX/IsaacLab-Arena
+ARENA_STACK=$YAM_PREFIX/yam-isaac-lab-arena
+[ -d "$ARENA_STACK/.git" ] || git clone "$YAM_ARENA_STACK_URL" "$ARENA_STACK"
+git -C "$ARENA_STACK" fetch --tags origin
+git -C "$ARENA_STACK" checkout --detach "$YAM_ARENA_STACK_REF"
+# Its setup.sh builds Arena's own venv, so it runs outside the Isaac Lab one.
+(
+  deactivate
+  export ACCEPT_EULA=Y
+  ARENA_DIR=$ARENA DREAM_SPEC="git+https://github.com/kairosiann/inspect-robots-dream@$DREAM_REF" \
+    bash "$ARENA_STACK/setup.sh"
+)
+
+step "Arena tabletop scene ($REPO/arena)"
+uv pip install --python "$ARENA/.venv/bin/python" --override "$ARENA_STACK/overrides.txt" -e "$REPO/arena"
+ARENA_EMBODIMENTS=$("$ARENA/.venv/bin/inspect-robots" list embodiments)
+ARENA_POLICIES=$("$ARENA/.venv/bin/inspect-robots" list policies)
+for name in yam_arena yam_tabletop; do grep -w "$name" <<<"$ARENA_EMBODIMENTS"; done
+for name in dream yam_scripted; do grep -w "$name" <<<"$ARENA_POLICIES"; done
+
 step "shell"
 grep -q "# yam-sim launchable" "$HOME/.bashrc" || cat >> "$HOME/.bashrc" <<RC
 
@@ -147,4 +176,15 @@ In a terminal on the instance:
     yam-sim view                                   # the scene, arms holding still
     yam-sim edit ~/scene.usda                      # edit and save the environment
     inspect-robots run --embodiment yam_sim --policy agent --instruction "put the red cube on the plate"
+
+New shells start in the Isaac Lab venv. For Arena, Dream-1 and the scripted demo, switch first:
+    source $ARENA/yam.env
+    yam-arena view                                 # the Arena tabletop scene
+    yam-arena eval arena/experiments/yam_tabletop.yaml
+    inspect-robots run --embodiment yam_arena --policy yam_scripted \\
+        -E scene=station -E object_jitter=0 -E control_hz=20 -E cam_width=320 -E cam_height=176 \\
+        --instruction "put apple into the bowl" --scorer success_at_end \\
+        --max-steps 600 --store-frames --log-dir ~/yam-eval/scripted
+Dream-1 needs a key from https://platform.dreamlabs.ai/api-keys in ~/.dreamlabs/credentials; then
+use --policy dream and --max-steps 2400 in the same command.
 DONE

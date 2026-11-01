@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yam-tabletop"
+version = "0.1.0"
+description = "Bimanual I2RT YAM tabletop for Isaac Lab Arena and its Inspect Robots embodiment"
+requires-python = ">=3.12"
+# Isaac Lab Arena, Isaac Lab and Isaac Sim are not PyPI dependencies: install this into an
+# Isaac Lab Arena environment (Arena 0.3.1, Isaac Lab 3.0, Python 3.12). Install editable
+# (`pip install -e .`): the URDF and meshes are read from assets/ at the root of this repo.
+dependencies = [
+    "inspect-robots>=0.58",
+    # Pinned: the embodiment reuses its observation/action contract and joint guide.
+    "inspect-robots-yam==0.37.0",
+    "numpy",
+    "opencv-python-headless",
+]
+
+[tool.setuptools]
+packages = ["yam_tabletop", "yam_tabletop.arena"]
+
+[project.scripts]
+yam-arena = "yam_tabletop.cli:main"
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_tabletop = "yam_tabletop.embodiment:yam_tabletop_embodiment"

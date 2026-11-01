@@ -24,6 +24,7 @@ not yet been run end to end on a fresh instance.
 | `launchable/desktop.sh` | The browser desktop (Xvfb + xfce + noVNC on port 6080), run by the `yam-desktop` service |
 | `scripts/view_scene.py` | Spawns the scene and runs a demo motion |
 | `scripts/check_collision.py` | Measures, per link, how closely the simulated colliders follow the visual meshes |
+| `arena/` | The same tabletop in Isaac Lab Arena: the `yam-arena` command and `yam_tabletop` embodiment, see [its README](arena/README.md) |
 
 ## Run
 
@@ -115,6 +116,12 @@ built-in scene) by up to 3 cm.
   activated in `~/.bashrc`
 - [inspect-robots](https://github.com/robocurve/inspect-robots) (tag `v0.60.0`) with its
   `agent` policy plugin, and this repo, all editable
+- in a second venv (`IsaacLab-Arena/.venv`, Python 3.12, with Isaac Sim 6 and Isaac Lab 3.0):
+  [Isaac Lab Arena](https://github.com/isaac-sim/IsaacLab-Arena) 0.3.1,
+  [yam-isaac-lab-arena](https://github.com/kairosiann/yam-isaac-lab-arena) (the `yam_arena`
+  embodiment and `yam_scripted` demo policy),
+  [Dream-1](https://github.com/kairosiann/inspect-robots-dream) (the `dream` policy), and this
+  repo's [Arena tabletop](arena/README.md); the two kairosiann repos are pinned to commits
 - a browser desktop as the `yam-desktop` systemd service: Xvfb + xfce on `:1`, noVNC on
   port 6080, password in `~/yam-desktop-password`
 
@@ -156,5 +163,35 @@ yam-sim edit ~/scene.usda       # edit and save the environment
 export ANTHROPIC_API_KEY=...    # for the agent policy
 inspect-robots run --embodiment yam_sim --policy agent --instruction "put the red cube on the plate"
 ```
+
+New shells start in the Isaac Lab venv. Switch to the Arena one for Arena, Dream-1 and the
+scripted demo (`<prefix>` is `/data` or `$HOME`, as above):
+
+```bash
+source <prefix>/IsaacLab-Arena/yam.env
+
+# The Arena tabletop scene, from the repo root
+yam-arena view
+yam-arena eval arena/experiments/yam_tabletop.yaml
+
+# The scripted demo in Dream's station scene
+inspect-robots run --embodiment yam_arena --policy yam_scripted \
+  -E scene=station -E object_jitter=0 -E control_hz=20 -E cam_width=320 -E cam_height=176 \
+  --instruction "put apple into the bowl" --scorer success_at_end \
+  --max-steps 600 --store-frames --log-dir ~/yam-eval/scripted
+
+# Dream-1, with a key from https://platform.dreamlabs.ai/api-keys
+mkdir -p ~/.dreamlabs && echo 'DREAM_API_KEY=dl_live_...' > ~/.dreamlabs/credentials
+chmod 600 ~/.dreamlabs/credentials
+inspect-robots run --embodiment yam_arena --policy dream \
+  -E scene=station -E control_hz=20 -E cam_width=320 -E cam_height=176 \
+  --instruction "put apple into the bowl" --scorer success_at_end \
+  --max-steps 2400 --store-frames --log-dir ~/yam-eval/dream
+```
+
+To watch a `yam_arena` run, add `-E headless=false` in a terminal on the desktop. Don't use
+`setup.sh --desktop` from yam-isaac-lab-arena: `yam-desktop` already holds display `:1` and
+port 6080. See the [yam-isaac-lab-arena README](https://github.com/kairosiann/yam-isaac-lab-arena)
+for its scenes, task files and policies.
 
 `sudo systemctl restart yam-desktop` restarts the desktop if it gets stuck.

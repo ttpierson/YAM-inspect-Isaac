@@ -124,6 +124,9 @@ git -C "$ARENA_STACK" checkout --detach "$YAM_ARENA_STACK_REF"
   ARENA_DIR=$ARENA DREAM_SPEC="git+https://github.com/kairosiann/inspect-robots-dream@$DREAM_REF" \
     bash "$ARENA_STACK/setup.sh"
 )
+# Arena 0.3.1 still points at the staging bucket, which no longer has its 6.1 assets.
+sed -i 's|^ARENA_NUCLEUS_DIR: str = .*|ARENA_NUCLEUS_DIR: str = ISAACLAB_NUCLEUS_DIR|' \
+  "$ARENA/isaaclab_arena/assets/nucleus.py"
 
 # Where the guides expect them, also when installing under /data.
 for dir in IsaacLab-Arena yam-isaac-lab-arena; do

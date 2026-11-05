@@ -17,7 +17,7 @@
 # Environment overrides:
 #   YAM_PREFIX          install root (default /data if writable, else $HOME)
 #   YAM_REPO_REF        branch or tag of this repo to clone when not run from a checkout (main)
-#   INSPECT_ROBOTS_REF  inspect-robots tag or branch (v0.60.0)
+#   INSPECT_ROBOTS_REF  inspect-robots tag or branch (v1.0.0)
 #   YAM_VNC_PASSWORD    desktop password (default: random, saved to ~/yam-desktop-password)
 #   YAM_ARENA_STACK_REF yam-isaac-lab-arena commit or tag to install (see below)
 #   DREAM_REF           inspect-robots-dream commit or tag to install (see below)
@@ -40,7 +40,7 @@ fi
 REPO_URL=https://github.com/ttpierson/YAM-inspect-Isaac.git
 ISAACLAB_REF=v2.3.2
 ISAACSIM_VERSION=5.1.0
-INSPECT_ROBOTS_REF=${INSPECT_ROBOTS_REF:-v0.60.0}
+INSPECT_ROBOTS_REF=${INSPECT_ROBOTS_REF:-v1.0.0}
 YAM_ARENA_STACK_URL=https://github.com/kairosiann/yam-isaac-lab-arena.git
 YAM_ARENA_STACK_REF=${YAM_ARENA_STACK_REF:-0059d02a1a91bc6834c1d0846022891df0c78730}
 DREAM_REF=${DREAM_REF:-b5e936a201cec66c54c297e522c920d98445e339}
@@ -105,6 +105,8 @@ step "inspect-robots $INSPECT_ROBOTS_REF"
 # A full clone: inspect-robots takes its version from the git tags (hatch-vcs).
 [ -d "$YAM_PREFIX/inspect-robots/.git" ] ||
   git clone --branch "$INSPECT_ROBOTS_REF" https://github.com/robocurve/inspect-robots.git "$YAM_PREFIX/inspect-robots"
+git -C "$YAM_PREFIX/inspect-robots" fetch --tags origin
+git -C "$YAM_PREFIX/inspect-robots" checkout --detach "$INSPECT_ROBOTS_REF"
 uv pip install -e "$YAM_PREFIX/inspect-robots" -e "$YAM_PREFIX/inspect-robots/plugins/inspect-robots-agent"
 
 step "yam-sim ($REPO)"

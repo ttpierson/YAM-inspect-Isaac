@@ -11,9 +11,9 @@ requires-python = ">=3.12"
 # Isaac Lab Arena environment (Arena 0.3.1, Isaac Lab 3.0, Python 3.12). Install editable
 # (`pip install -e .`): the URDF and meshes are read from assets/ at the root of this repo.
 dependencies = [
-    "inspect-robots>=0.58",
+    "inspect-robots>=1.0",
     # Pinned: the embodiment reuses its observation/action contract and joint guide.
-    "inspect-robots-yam==0.37.0",
+    "inspect-robots-yam==0.38.0",
     "numpy",
     "opencv-python-headless",
 ]

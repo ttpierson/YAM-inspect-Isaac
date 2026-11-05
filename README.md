@@ -114,7 +114,7 @@ built-in scene) by up to 3 cm.
 
 - Isaac Sim 5.1 and Isaac Lab 2.3.2 in a uv venv (`env_isaaclab`, Python 3.11),
   activated in `~/.bashrc`
-- [inspect-robots](https://github.com/robocurve/inspect-robots) (tag `v0.60.0`) with its
+- [inspect-robots](https://github.com/robocurve/inspect-robots) (tag `v1.0.0`) with its
   `agent` policy plugin, and this repo, all editable (`source <prefix>/env_isaaclab/bin/activate`)
 - in a second venv (`IsaacLab-Arena/.venv`, Python 3.12, with Isaac Sim 6 and Isaac Lab 3.0):
   [Isaac Lab Arena](https://github.com/isaac-sim/IsaacLab-Arena) 0.3.1,
